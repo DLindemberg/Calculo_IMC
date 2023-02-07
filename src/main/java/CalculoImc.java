@@ -56,7 +56,7 @@ public class CalculoImc {
 
         System.out.println("O resultado do IMC é " + String.format("%.2f", calculo)
                 + ", "
-                + "atualmente você está "
+                + "atualmente, você está "
                 + nivel
                 + ".");
 
