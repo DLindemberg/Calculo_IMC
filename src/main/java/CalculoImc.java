@@ -16,6 +16,17 @@ public class CalculoImc {
 
         float calculo = peso / (altura * altura);
 
+        String nivel = getString(calculo);
+
+        System.out.println("O resultado do IMC é " + String.format("%.2f", calculo)
+                + ", "
+                + "atualmente, você está "
+                + nivel
+                + ".");
+
+    }
+
+    private static String getString(float calculo) {
         String nivel = "";
 
         if (calculo < 18.5) {
@@ -53,13 +64,7 @@ public class CalculoImc {
             nivel = "com obesidade nível III (mórbido)";
 
         }
-
-        System.out.println("O resultado do IMC é " + String.format("%.2f", calculo)
-                + ", "
-                + "atualmente, você está "
-                + nivel
-                + ".");
-
+        return nivel;
     }
 
 }
